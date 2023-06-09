@@ -11,6 +11,7 @@
     "gatsby-plugin-sharp": "^4.24.0",
     "gatsby-source-filesystem": "^4.24.0",
     "gatsby-transformer-sharp": "^4.24.0",
+    "gatsby-source-storyblok": "^5.0.21",
     "prop-types": "^15.8.1",
     "react": "^18.1.0",
     "react-dom": "^18.1.0"
@@ -25,13 +26,13 @@
   "license": "0BSD",
   "scripts": {
     "build": "gatsby build",
-    "develop": "gatsby develop",
+    "develop": "SET ENABLE_GATSBY_REFRESH_ENDPOINT=true && gatsby develop",
     "format": "prettier --write \"**/*.{js,jsx,ts,tsx,json,md,css}\"",
     "start": "gatsby develop",
     "serve": "gatsby serve",
     "clean": "gatsby clean",
     "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1",
-    "proxy": "mkcert create-ca && mkcert create-cert && local-ssl-proxy --source 3010 --target 3000 --cert cert.crt --key cert.key"
+    "proxy": "mkcert create-ca && mkcert create-cert && local-ssl-proxy --source 3010 --target 8000 --cert cert.crt --key cert.key"
   },
   "repository": {
     "type": "git",
