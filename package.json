@@ -10,8 +10,8 @@
     "gatsby-plugin-manifest": "^4.24.0",
     "gatsby-plugin-sharp": "^4.24.0",
     "gatsby-source-filesystem": "^4.24.0",
+    "gatsby-source-storyblok": "^4.2.1",
     "gatsby-transformer-sharp": "^4.24.0",
-    "gatsby-source-storyblok": "^5.0.21",
     "prop-types": "^15.8.1",
     "react": "^18.1.0",
     "react-dom": "^18.1.0"
@@ -26,7 +26,7 @@
   "license": "0BSD",
   "scripts": {
     "build": "gatsby build",
-    "develop": "SET ENABLE_GATSBY_REFRESH_ENDPOINT=true && gatsby develop",
+    "develop": "gatsby develop",
     "format": "prettier --write \"**/*.{js,jsx,ts,tsx,json,md,css}\"",
     "start": "gatsby develop",
     "serve": "gatsby serve",

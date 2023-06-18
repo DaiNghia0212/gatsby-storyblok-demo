@@ -6,6 +6,7 @@ const Feature = ({ blok }) => {
     <div {...storyblokEditable(blok)} key={blok._uid}>
       <h2>{blok.name}</h2>
       <p>{blok.description}</p>
+      <img src={blok.image?.filename} alt={blok.image?.alt}/>
     </div>
   )
 }

@@ -1,7 +1,11 @@
 import * as React from "react"
 import { graphql } from "gatsby"
 
-import { useStoryblokState, StoryblokComponent, storyblokEditable } from "gatsby-source-storyblok"
+import {
+  useStoryblokState,
+  StoryblokComponent,
+  storyblokEditable,
+} from "gatsby-source-storyblok"
 
 import Layout from "../components/layout"
 
@@ -9,7 +13,9 @@ const StoryblokPage = ({ data }) => {
   let story = data.storyblokEntry
   story = useStoryblokState(story)
 
-  const components = story.content.body.map(blok => (<StoryblokComponent blok={blok} key={blok._uid} />))
+  const components = story.content.body.map(blok => (
+    <StoryblokComponent blok={blok} key={blok._uid} />
+  ))
 
   return (
     <Layout>
@@ -24,8 +30,8 @@ const StoryblokPage = ({ data }) => {
 export default StoryblokPage
 
 export const query = graphql`
-  query HomeQuery {
-    storyblokEntry(full_slug: { eq: "storyblok" }) {
+  query ($full_slug: String!) {
+    storyblokEntry(full_slug: { eq: $full_slug }) {
       content
       name
       full_slug
