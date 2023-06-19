@@ -30,8 +30,8 @@ const StoryblokPage = ({ data }) => {
 export default StoryblokPage
 
 export const query = graphql`
-  query ($full_slug: String!) {
-    storyblokEntry(full_slug: { eq: $full_slug }) {
+  query HomeQuery {
+    storyblokEntry(full_slug: { eq: "storyblok" }) {
       content
       name
       full_slug

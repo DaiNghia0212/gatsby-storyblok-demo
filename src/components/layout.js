@@ -15,11 +15,13 @@ import "./layout.css"
 import Teaser from "./teaser"
 import Grid from "./grid"
 import Feature from "./feature"
+import Article from "./article"
 
 storyblokInit({
   accessToken: process.env.GATSBY_STORYBLOK_ACCESS_TOKEN,
   use: [apiPlugin],
   components: {
+    article: Article,
     teaser: Teaser,
     grid: Grid,
     feature: Feature,
